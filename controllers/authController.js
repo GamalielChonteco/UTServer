@@ -57,7 +57,7 @@ exports.autenticarUsuario = async (req, res) => {
 exports.usuarioAutenticado = async (req, res) => {
     try {
         const usuario = await Usuarios.findOne({
-            attributes: ['id', 'nombre', 'tipo_usuario', 'username'],
+            attributes: ['id', 'nombre', 'ap_paterno', 'ap_materno', 'tipo_usuario', 'username'],
             where: { id: req.usuario.id }
         })
         res.json({ usuario })

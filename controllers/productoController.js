@@ -40,6 +40,7 @@ exports.actualizarProducto = async (req, res) => {
         const producto = await Productos.update(req.body, {
             where: { id }
         })
+
         res.json({ producto })
     } catch (error) {
         res.status(500).send('Hubo un error')

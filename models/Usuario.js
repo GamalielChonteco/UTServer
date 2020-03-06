@@ -9,7 +9,9 @@ const Usuarios = db.define('usuario', {
         autoIncrement: true
     },
     nombre: Sequelize.STRING,
-    tipo_usuario: Sequelize.STRING,
+    ap_paterno: Sequelize.STRING,
+    ap_materno: Sequelize.STRING,
+    tipo_usuario: Sequelize.INTEGER,
     username: {
         type: Sequelize.STRING,
         allowNull: false

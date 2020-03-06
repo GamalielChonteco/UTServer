@@ -23,6 +23,11 @@ router.put('/:id',
     usuarioController.actualizarUsuario
 )
 
+// Actualizar contraseña
+router.put('/password/:id',
+    usuarioController.actualizarPassword
+)
+
 // Eliminar usuario
 router.delete('/:id',
     usuarioController.eliminarUsuario
