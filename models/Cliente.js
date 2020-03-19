@@ -11,7 +11,6 @@ const Clientes = db.define('cliente', {
     nombre: Sequelize.STRING,
     direccion: Sequelize.STRING,
     rfc: Sequelize.STRING
-
 })
 
 module.exports = Clientes

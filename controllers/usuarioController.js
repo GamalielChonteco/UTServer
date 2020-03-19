@@ -5,7 +5,7 @@ const bcryptjs = require('bcryptjs')
 exports.obtenerUsuarios = async (req, res) => {
     try {
         const usuarios = await Usuarios.findAll({
-            attributes: ['id', 'nombre', 'ap_paterno', 'ap_materno', 'tipo_usuario', 'username']
+            attributes: ['id', 'nombre', 'ap_paterno', 'ap_materno', 'tipo_usuario', 'username', 'insert_producto', 'update_producto', 'delete_producto', 'agregar_linea', 'actualizar_linea', 'eliminar_linea', 'realizar_corte', 'realizar_venta']
         })
         res.json({ usuarios })
     } catch (error) {

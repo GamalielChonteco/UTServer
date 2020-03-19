@@ -8,16 +8,62 @@ const Usuarios = db.define('usuario', {
         primaryKey: true,
         autoIncrement: true
     },
-    nombre: Sequelize.STRING,
+    nombre: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     ap_paterno: Sequelize.STRING,
     ap_materno: Sequelize.STRING,
-    tipo_usuario: Sequelize.INTEGER,
+    tipo_usuario: {
+        type: Sequelize.INTEGER,
+        unique: true
+    },
     username: {
         type: Sequelize.STRING,
         allowNull: false
     },
     password: {
         type: Sequelize.STRING,
+        allowNull: false
+    },
+    insert_producto: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    update_producto: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    delete_producto: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    agregar_linea: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    actualizar_linea: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    eliminar_linea: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    realizar_corte: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    realizar_venta: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
         allowNull: false
     }
 }, {
