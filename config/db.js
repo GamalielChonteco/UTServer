@@ -2,9 +2,9 @@ const Sequelize = require('sequelize')
 require('dotenv').config({ path: 'variables.env' })
 
 // Crear instancia de la BD
-const db = new Sequelize('db_puntoventa', 'sa', '12345678', {
+const db = new Sequelize('utvco', 'root', '', {
     host: 'localhost',
-    dialect: 'mssql',
+    dialect: 'mysql',
     operatorAliases: false,
     define: {
         timestamps: false
